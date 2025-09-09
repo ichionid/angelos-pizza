@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function ContactPage() {
   return (
     <main className="max-w-6xl mx-auto py-16 px-6">
@@ -14,7 +12,7 @@ export default function ContactPage() {
         {/* Contact Info */}
         <div>
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h2 className="text-2xl font-bold mb-6">Angelo's Pizza Berlin</h2>
+            <h2 className="text-2xl font-bold mb-6">Angelon&#39;s Pizza Berlin</h2>
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">

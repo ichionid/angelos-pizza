@@ -71,7 +71,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <Link href="/" className="text-2xl font-bold text-red-600">
-                Angelo's Pizza
+                Angelon&#39;s Pizza
               </Link>
               <div className="hidden md:flex space-x-8">
                 <Link href="/" className="text-gray-700 hover:text-red-600 transition">
@@ -106,8 +106,8 @@ export default function RootLayout({
         <footer className="bg-red-700 text-white py-8">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center">
-              <p className="text-lg font-semibold">Angelo's Pizza Berlin</p>
-              <p className="mt-2">© {new Date().getFullYear()} Angelo's Pizza - Alle Rechte vorbehalten</p>
+              <p className="text-lg font-semibold">Angelon&#39;s Pizza Berlin</p>
+              <p className="mt-2">© {new Date().getFullYear()} Angelon&#39;s Pizza - Alle Rechte vorbehalten</p>
               <div className="mt-4 space-x-6">
                 <Link href="/impressum" className="hover:underline">
                   Impressum

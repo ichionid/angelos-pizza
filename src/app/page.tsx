@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-red-600 to-red-800 text-white py-20">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Willkommen bei Angelo's Pizza
+            Willkommen bei Angelo&#39;s Pizza
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Authentische italienische Pizza in Berlin. Handgemacht, holzofengebacken und immer frisch seit 1985.
@@ -61,7 +61,7 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">Warum Angelo's Pizza?</h2>
+          <h2 className="text-4xl font-bold text-center mb-12">Warum Angelo&#39;s Pizza?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
