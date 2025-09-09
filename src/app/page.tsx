@@ -1,13 +1,7 @@
 import Image from "next/image";
 
 export default function Home() {
-  const handleWhatsAppClick = () => {
-    // Replace with your phone number (include country code, no + sign)
-    const phoneNumber = "1234567890";
-    const message = "Hello! I would like to chat.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  };
+
   return (
     <main className="min-h-screen bg-red-50 text-gray-900">
       {/* Hero Section */}
@@ -58,7 +52,6 @@ export default function Home() {
               <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">{pizza.price}</span>
                 <button
-                    onClick={handleWhatsAppClick}
                     className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transitioninline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
                   Order
