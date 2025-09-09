@@ -1,103 +1,119 @@
 import Image from "next/image";
 
 export default function Home() {
+  const handleWhatsAppClick = () => {
+    // Replace with your phone number (include country code, no + sign)
+    const phoneNumber = "1234567890";
+    const message = "Hello! I would like to chat.";
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+    <main className="min-h-screen bg-red-50 text-gray-900">
+      {/* Hero Section */}
+      <section className="relative h-[80vh] flex items-center justify-center">
+        {/* Hero Image */}
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/hero.webp" // replace with your own image in /public
+          alt="Delicious pizza"
+          fill
+          className="object-cover brightness-75"
           priority
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-6xl font-extrabold drop-shadow-lg">
+            🍕 Angelo&apos;s Pizza
+          </h1>
+          <p className="mt-4 text-xl">
+            Fresh, hot & handmade – since 1985
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/menu"
+            className="mt-6 inline-block bg-red-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-red-700 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            View Menu
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Menu Preview */}
+      <section className="max-w-5xl mx-auto py-16 px-6">
+        <h2 className="text-3xl font-bold text-center mb-8">Our Favorites</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {[
+            { name: "Margherita", price: "€8.00" },
+            { name: "Pepperoni", price: "€9.50" },
+            { name: "Funghi", price: "€9.00" },
+          ].map((pizza, i) => (
+            <div
+              key={i}
+              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between"
+            >
+              <div>
+                <h3 className="text-xl font-semibold">{pizza.name}</h3>
+                <p className="text-gray-600 mt-2">
+                  A tasty classic with fresh ingredients.
+                </p>
+              </div>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="font-bold">{pizza.price}</span>
+                <button
+                    onClick={handleWhatsAppClick}
+                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transitioninline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  >
+                  Order
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-10">
+          <a
+            href="/menu"
+            className="text-red-600 font-semibold hover:underline"
+          >
+            See full menu →
+          </a>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="bg-white py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Our Story</h2>
+          <p className="text-gray-700 leading-relaxed">
+            At Angelo&apos;s Pizza, we&apos;ve been serving authentic,
+            wood-fired pizzas since 1985. From fresh mozzarella to hand-picked
+            basil, every bite brings you closer to Napoli.
+          </p>
+        </div>
+      </section>
+
+      {/* Location & Hours */}
+      <section className="bg-red-100 py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Visit Us</h2>
+          <p className="mb-2">📍 Main Street 42, Berlin</p>
+          <p className="mb-4">🕒 Mon–Sun: 11:00 – 22:00</p>
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-red-600 text-white px-6 py-3 rounded-xl shadow hover:bg-red-700 transition"
+          >
+            Find Us on Google Maps
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-red-700 text-white py-6 text-center">
+        <p>© {new Date().getFullYear()} Angelo&apos;s Pizza</p>
+        <div className="mt-2 space-x-4">
+          <a href="#" className="hover:underline">Impressum</a>
+          <a href="#" className="hover:underline">Datenschutz</a>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
