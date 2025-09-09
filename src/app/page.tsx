@@ -5,19 +5,12 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white py-20 overflow-hidden">
-        <Image
-          src="/hero.webp"
-          alt="Angelo's Pizza Hero"
-          fill
-          className="object-cover height-full w-full -z-1"
-          priority
-        />
-        <div className="relative max-w-6xl mx-auto px-6 text-center z-5">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
+      <section className="bg-gradient-to-br from-red-600 to-red-800 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Willkommen bei Angelo's Pizza
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl  text-black mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Authentische italienische Pizza in Berlin. Handgemacht, holzofengebacken und immer frisch seit 1985.
           </p>
           <div className="space-x-4">
