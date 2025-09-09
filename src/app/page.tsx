@@ -1,103 +1,121 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
-
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-red-50 text-gray-900">
+    <>
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center">
-        {/* Hero Image */}
+      <section className="relative text-white py-20 overflow-hidden">
         <Image
-          src="/hero.webp" // replace with your own image in /public
-          alt="Delicious pizza STAGING"
+          src="/hero.webp"
+          alt="Angelo's Pizza Hero"
           fill
-          className="object-cover brightness-75"
+          className="object-cover height-full w-full -z-1"
           priority
         />
-        <div className="relative z-10 text-center text-white">
-          <h1 className="text-6xl font-extrabold drop-shadow-lg">
-            🍕 Angelo&apos;s Pizza
+        <div className="relative max-w-6xl mx-auto px-6 text-center z-5">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-black">
+            Willkommen bei Angelo's Pizza
           </h1>
-          <p className="mt-4 text-xl">
-            Fresh, hot & handmade – since 1985
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl  text-black mx-auto">
+            Authentische italienische Pizza in Berlin. Handgemacht, holzofengebacken und immer frisch seit 1985.
           </p>
-          <a
-            href="/menu"
-            className="mt-6 inline-block bg-red-600 text-white px-8 py-3 rounded-xl shadow-lg hover:bg-red-700 transition"
-          >
-            View Menu
-          </a>
-        </div>
-      </section>
-
-      {/* Menu Preview */}
-      <section className="max-w-5xl mx-auto py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Favorites</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {[
-            { name: "Margherita", price: "€8.00" },
-            { name: "Pepperoni", price: "€9.50" },
-            { name: "Funghi", price: "€9.00" },
-          ].map((pizza, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between"
+          <div className="space-x-4">
+            <Link
+              href="/menu"
+              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
             >
-              <div>
-                <h3 className="text-xl font-semibold">{pizza.name}</h3>
-                <p className="text-gray-600 mt-2">
-                  A tasty classic with fresh ingredients.
-                </p>
-              </div>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="font-bold">{pizza.price}</span>
-                <button
-                    className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transitioninline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                  >
-                  Order
-                </button>
-              </div>
+              Speisekarte ansehen
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition inline-block"
+            >
+              Kontakt
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold mb-6">Unsere Geschichte</h2>
+              <p className="text-lg text-gray-700 mb-4">
+                Seit über 35 Jahren servieren wir die beste authentische italienische Pizza in Berlin.
+                Angelo gründete unser Restaurant 1985 mit der Vision, traditionelle italienische Aromen
+                nach Deutschland zu bringen.
+              </p>
+              <p className="text-lg text-gray-700">
+                Jede Pizza wird von Hand gemacht und in unserem original italienischen Holzofen gebacken.
+                Wir verwenden nur die frischesten Zutaten und traditionelle Rezepte aus der Familie Angelo.
+              </p>
             </div>
-          ))}
-        </div>
-        <div className="text-center mt-10">
-          <a
-            href="/menu"
-            className="text-red-600 font-semibold hover:underline"
-          >
-            See full menu →
-          </a>
+            <div className="relative h-140">
+              <Image
+                src="/chef.webp"
+                alt="Angelo beim Pizzabacken"
+                fill
+                className="object-cover rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* About */}
-      <section className="bg-white py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Our Story</h2>
-          <p className="text-gray-700 leading-relaxed">
-            At Angelo&apos;s Pizza, we&apos;ve been serving authentic,
-            wood-fired pizzas since 1985. From fresh mozzarella to hand-picked
-            basil, every bite brings you closer to Napoli.
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-12">Warum Angelo's Pizza?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🔥</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Holzofengebacken</h3>
+              <p className="text-gray-600">
+                Jede Pizza wird in unserem traditionellen italienischen Holzofen bei über 400°C gebacken.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🌱</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Frische Zutaten</h3>
+              <p className="text-gray-600">
+                Täglich frische Zutaten direkt vom Markt. Tomaten aus Italien, Mozzarella aus der Region.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">👨‍🍳</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Familienrezepte</h3>
+              <p className="text-gray-600">
+                Traditionelle Rezepte, die seit Generationen in der Familie Angelo weitergegeben werden.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-red-600 text-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6">Besuchen Sie uns heute!</h2>
+          <p className="text-xl mb-8">
+            Erleben Sie den authentischen Geschmack Italiens mitten in Berlin.
           </p>
-        </div>
-      </section>
-
-      {/* Location & Hours */}
-      <section className="bg-red-100 py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Visit Us</h2>
-          <p className="mb-2">📍 Main Street 42, Berlin</p>
-          <p className="mb-4">🕒 Mon–Sun: 11:00 – 22:00</p>
-          <a
-            href="https://maps.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-red-600 text-white px-6 py-3 rounded-xl shadow hover:bg-red-700 transition"
+          <Link
+            href="/contact"
+            className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
           >
-            Find Us on Google Maps
-          </a>
+            Adresse & Öffnungszeiten
+          </Link>
         </div>
       </section>
-    </main>
+    </>
   );
 }

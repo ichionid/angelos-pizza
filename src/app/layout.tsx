@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -56,27 +57,69 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-      </body>
-      <footer className="bg-red-700 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Angelo&apos;s Pizza</p>
-        <div className="mt-2 space-x-4">
-          <a href="/impressum" className="hover:underline">Impressum</a>
-          <a href="/datenschutz" className="hover:underline">Datenschutz</a>
-        </div>
-      </footer>
+        <nav className="bg-white shadow-md sticky top-0 z-50">
+          <div className="max-w-6xl mx-auto px-6 py-4">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="text-2xl font-bold text-red-600">
+                Angelo's Pizza
+              </Link>
+              <div className="hidden md:flex space-x-8">
+                <Link href="/" className="text-gray-700 hover:text-red-600 transition">
+                  Home
+                </Link>
+                <Link href="/menu" className="text-gray-700 hover:text-red-600 transition">
+                  Speisekarte
+                </Link>
+                <Link href="/merch" className="text-gray-700 hover:text-red-600 transition">
+                  Merchandise
+                </Link>
+                <Link href="/contact" className="text-gray-700 hover:text-red-600 transition">
+                  Kontakt
+                </Link>
+              </div>
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <button className="text-gray-700 hover:text-red-600">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
 
+        <main className="min-h-screen">
+          {children}
+        </main>
+
+        <footer className="bg-red-700 text-white py-8">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="text-center">
+              <p className="text-lg font-semibold">Angelo's Pizza Berlin</p>
+              <p className="mt-2">© {new Date().getFullYear()} Angelo's Pizza - Alle Rechte vorbehalten</p>
+              <div className="mt-4 space-x-6">
+                <Link href="/impressum" className="hover:underline">
+                  Impressum
+                </Link>
+                <Link href="/datenschutz" className="hover:underline">
+                  Datenschutz
+                </Link>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
