@@ -9,7 +9,7 @@ export default function Home() {
         {/* Hero Image */}
         <Image
           src="/hero.webp" // replace with your own image in /public
-          alt="Delicious pizza"
+          alt="Delicious pizzaz"
           fill
           className="object-cover brightness-75"
           priority
