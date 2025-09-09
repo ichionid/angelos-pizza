@@ -98,15 +98,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-red-700 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Angelo&apos;s Pizza</p>
-        <div className="mt-2 space-x-4">
-          <a href="#" className="hover:underline">Impressum</a>
-          <a href="#" className="hover:underline">Datenschutz</a>
-        </div>
-      </footer>
     </main>
   );
 }
