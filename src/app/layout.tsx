@@ -12,33 +12,30 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+  title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
   description:
-    "Authentic Italian pizza in Berlin. Wood-fired, handmade, and always fresh. Order online or visit Angelo's Pizza today!",
+    "Angelo's Pizza in Werdohl – seit 1985. Authentische italienische Pizza, frisch gebacken im Holzofen. Besuchen Sie uns für den besten Geschmack Italiens.",
   keywords: [
-    "pizza",
-    "italian restaurant",
-    "pizzeria berlin",
-    "wood-fired pizza",
-    "order pizza online",
+    "Pizza Werdohl",
+    "beste Pizza Werdohl",
+    "italienisches Restaurant Werdohl",
+    "Holzofenpizza Werdohl",
+    "Angelo's Pizza",
+    "Pizzeria Werdohl",
   ],
-  authors: [{ name: "Angelo's Pizza" }],
-  creator: "Angelo's Pizza",
-  metadataBase: new URL("https://angelos-pizza.de"), // update when domain ready
   openGraph: {
-    title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+    title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
-      "Authentic Italian pizza in Berlin. Wood-fired, handmade, and always fresh.",
-    url: "https://angelos-pizza.de",
+      "Seit 1985 die beste Pizza in Werdohl. Handgemacht, frisch & im Holzofen gebacken.",
+    url: "https://angelos-pizza-werdohl.de",
     siteName: "Angelo's Pizza",
     images: [
       {
-        url: "/og-pizza.jpg", // put an image in /public
+        url: "/chef.webp", // replace with a nice OG image later (1200x630 recommended)
         width: 1200,
         height: 630,
-        alt: "Fresh handmade pizza from Angelo's",
+        alt: "Angelo's Pizza Werdohl – Holzofenpizza",
       },
     ],
     locale: "de_DE",
@@ -46,10 +43,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+    title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
-      "Order authentic wood-fired pizza in Berlin. Fresh, hot & handmade since 1985.",
-    images: ["/og-pizza.jpg"],
+      "Holzofenpizza & italienische Spezialitäten in Werdohl. Seit 1985 ein Stück Italien in Ihrer Stadt.",
+    creator: "@angelospizza", // change if you have a Twitter/X handle
+    images: ["/chef.webp"],
+  },
+  alternates: {
+    canonical: "https://angelos-pizza-werdohl.de",
   },
   robots: {
     index: true,
