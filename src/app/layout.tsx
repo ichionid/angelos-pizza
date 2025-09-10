@@ -74,20 +74,6 @@ export default function RootLayout({
               <Link href="/" className="text-2xl font-bold text-red-600">
                 Angelon&#39;s Pizza
               </Link>
-              <div className="hidden md:flex space-x-8">
-                <Link href="/" className="text-gray-700 hover:text-red-600 transition">
-                  Home
-                </Link>
-                <Link href="/menu" className="text-gray-700 hover:text-red-600 transition">
-                  Speisekarte
-                </Link>
-                <Link href="/merch" className="text-gray-700 hover:text-red-600 transition">
-                  Merchandise
-                </Link>
-                <Link href="/contact" className="text-gray-700 hover:text-red-600 transition">
-                  Kontakt
-                </Link>
-              </div>
               {/* Mobile menu button */}
               <div className="md:hidden">
                 <button className="text-gray-700 hover:text-red-600">
