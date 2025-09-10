@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Angelo's Pizza",
     images: [
       {
-        url: "/chef.webp", // replace with a nice OG image later (1200x630 recommended)
+        url: "https://angelos-pizza-werdohl.de/chef.webp", // absolute URL
         width: 1200,
         height: 630,
         alt: "Angelo's Pizza Werdohl – Holzofenpizza",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
       "Holzofenpizza & italienische Spezialitäten in Werdohl. Seit 1985 ein Stück Italien in Ihrer Stadt.",
     creator: "@angelospizza", // change if you have a Twitter/X handle
-    images: ["/chef.webp"],
+    images: ["https://angelos-pizza-werdohl.de/chef.webp"], // or just ["/chef.webp"] if using metadataBase
   },
   alternates: {
     canonical: "https://angelos-pizza-werdohl.de",
