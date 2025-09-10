@@ -50,7 +50,7 @@ export default function HomePage() {
                 Angelo.
               </p>
             </div>
-            <div className="relative w-full h-[400px]">
+            <div className="relative w-full h-[600px]">
               <Image
                 src="/chef.webp"
                 alt="Angelo beim Pizzabacken"
