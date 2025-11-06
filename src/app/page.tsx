@@ -1,179 +1,240 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import styles from "./home.module.css";
+import SocialMediaBlock from './components/SocialMediaBlock';
+import PizzaGallery from './components/PizzaGallery';
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 to-red-800 text-white py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Willkommen bei Angelo&#39;s Pizza
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Authentische italienische Pizza in Berlin. Handgemacht,
-            holzofengebacken und immer frisch seit 1985.
-          </p>
-          <div className="space-x-4">
-            <Link
-              href="#menu"
-              className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
-            >
-              Speisekarte ansehen
-            </Link>
-            <Link
-              href="#contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition inline-block"
-            >
-              Kontakt
-            </Link>
+      <section className={styles.heroSection} id="home">
+        <div className={styles.aboutContent}>
+          <div className={styles.heroText}>
+            <h1>Angelos Ziavros – Tradition, Küche und Pizza in Werdohl</h1>
+            <p>
+            Ich bin Angelos Ziavros, leidenschaftlicher Koch aus Werdohl. Mit über 20 Jahren Erfahrung in der Gastronomie bringe ich mediterrane Tradition und deutsche Kochkunst zusammen. Jeden Samstag verwöhne ich Werdohl mit frischer Holzofenpizza aus regionalen Zutaten in der Holzofenbäckerei Deitmerg.
+            </p>
+            <p>
+              Mein Anspruch: Nur die besten Zutaten, sorgfältige Zubereitung und eine Portion
+              Leidenschaft in jedem Gericht. Besuchen Sie mich und erleben Sie authentische
+              Küche in familiärer Atmosphäre.
+            </p>
           </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">Unsere Geschichte</h2>
-              <p className="text-lg text-gray-700 mb-4">
-                Seit über 35 Jahren servieren wir die beste authentische
-                italienische Pizza in Berlin. Angelo gründete unser Restaurant
-                1985 mit der Vision, traditionelle italienische Aromen nach
-                Deutschland zu bringen.
-              </p>
-              <p className="text-lg text-gray-700">
-                Jede Pizza wird von Hand gemacht und in unserem original
-                italienischen Holzofen gebacken. Wir verwenden nur die
-                frischesten Zutaten und traditionelle Rezepte aus der Familie
-                Angelo.
-              </p>
-            </div>
-            <div className="relative w-full h-[600px]">
-              <Image
-                src="/chef.webp"
-                alt="Angelo beim Pizzabacken"
-                fill
-                className="object-cover rounded-[2rem] shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            Warum Angelo&#39;s Pizza?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔥</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Holzofengebacken</h3>
-              <p className="text-gray-600">
-                Jede Pizza wird in unserem traditionellen Holzofen gebacken.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🌱</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Frische Zutaten</h3>
-              <p className="text-gray-600">
-                Täglich frische Zutaten direkt vom Markt. Tomaten aus Italien,
-                Mozzarella aus der Region.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">👨‍🍳</span>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Familienrezepte</h3>
-              <p className="text-gray-600">
-                Traditionelle Rezepte, die seit Generationen weitergegeben
-                werden.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Menu Image Section */}
-      <section id="menu" className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-8">Unsere Speisekarte</h2>
-          <div className="relative w-full h-[700px]">
+          <div>
             <Image
-              src="/menu.webp"
-              alt="Speisekarte"
-              fill
-              className="object-contain rounded-xl shadow-lg"
+              src="/chef.webp"
+              alt="Angelos Ziavros"
+              width={300}
+              height={400}
+              className={styles.heroImage}
             />
           </div>
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-12">Galerie</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="relative h-[350px]">
-              <Image
-                src="/dove.webp"
-                alt="Friedenstaube Symbol"
-                fill
-                className="object-cover rounded-2xl shadow-lg"
-              />
-            </div>
-            <div className="relative h-[350px]">
-              <Image
-                src="/oven.webp"
-                alt="Traditioneller Pizzaofen"
-                fill
-                className="object-cover rounded-2xl shadow-lg"
-              />
-            </div>
+      {/* About Section */}
+   <section className={styles.aboutSection} id="about">
+        <div className={styles.aboutContent}>
+          <div>
+            <Image
+              src="/chefs.svg"
+              alt="Angelos mit Team"
+              width={300}
+              height={400}
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            />
+          </div>
+          <div id="angelos" className={styles.aboutText}>
+            <h2>Über Angelos Ziavros</h2>
+            <p>
+             Koch aus Werdohl – zwischen mediterranen Wurzeln und deutscher Tradition.
+            </p>
+            <p>
+             Nach über 20 Jahren Erfahrung in der Gastronomie habe ich mich entschieden, den Weg der Tradition einzuschlagen.
+             Seit August 2023 arbeite ich mit dem Meisterbäcker Hubert Deitmerg in seiner traditionellen Bäckerei, die seit über 20 Jahren besteht.
+             Jeden Samstag vertraut er mir seinen Ofen für das Angelos Pizza Projekt an.
+             Gemeinsam mit Hubert backen wir jeden Donnerstags- und Freitagabend traditionelles Holzofenbrot sowie viele weitere klassische deutsche Backwaren.
+             Dabei gewinne ich Woche für Woche ein tiefes Verständnis für die präzise und feine Arbeit, die nötig ist, um einen guten Teig herzustellen.
+            </p>
+            <p>
+              Parallel dazu arbeite ich als Koch in der Küche des Restaurants Thuns Dorfkrug, wo wir seit über fünf Jahren eine ausgezeichnete Zusammenarbeit pflegen.
+              Dort habe ich direkt von Chefin Frau Thun wertvolle Kenntnisse der deutschen Küche erworben.
+            </p>
+            <p>
+              Meine Wurzeln liegen in der mediterranen Küche.
+              Mein Ziel ist es, beide Traditionen miteinander zu verbinden, um etwas Einzigartiges zu schaffen – und dabei folge ich ausschließlich meinem Herzen.
+            </p>
+            <div className={styles.signature}>Angelos</div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section
-        id="contact"
-        className="py-16 bg-gradient-to-br from-red-600 to-red-800 text-white"
-      >
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Besuchen Sie uns heute!</h2>
-          <p className="text-xl mb-8">
-            Erleben Sie den authentischen Geschmack Italiens mitten in Berlin.
-          </p>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="mb-4 font-semibold">Adresse & Öffnungszeiten:</p>
-              <p>Pizza Straße 1, 10115 Berlin</p>
-              <p>Mo–So: 11:00 – 23:00 Uhr</p>
-            </div>
-            <div className="relative w-full h-[250px] bg-white p-4 rounded-xl">
-              <Image
-                src="/whatsapp-qr.webp"
-                alt="WhatsApp QR Code"
-                fill
-                className="object-contain"
-              />
+      {/* Pizza Section */}
+      <section className={styles.pizzaSection} id="menu">
+        <div className={styles.pizzaContent}>
+          <div className={styles.pizzaText}>
+            <h2>Pizza in Wendtorf – frisch aus dem Holzofen</h2>
+            <p>
+              Jede Zutaten zählt! Und jeder Schritt von der Teigherstellung bis zum
+              Belegen ist für das perfekte Ergebnis entscheidend. Bei mir wird jeder Pizza mit
+              Sorgfalt und Liebe zum Detail zubereitet.
+            </p>
+            <p>
+              Meine Pizza-Teige ruhen 48 Stunden, damit sie ihr volles Aroma entfalten können.
+              Im Steinofen bei über 400°C entstehen dann knusprige Meisterwerke, die jeden
+              Bissen zu einem Genuss machen.
+            </p>
+
+            <div className={styles.ingredients}>
+              <h3>Unsere Pizza-Auswahl</h3>
+              <ul className={styles.pizzaList}>
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>1 – Margherita – 9</span><br />
+                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Basilikum | Olivenöl</span>
+                </li>
+
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>2 – Salami – 12</span><br />
+                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Salami</span>
+                </li>
+
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>3 – Bacon – 12</span><br />
+                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Bacon | karamellisierte Zwiebeln</span>
+                </li>
+
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>4 – Griechische Delikatesse – 13</span><br />
+                  <span className={styles.pizzaIngredients}>€ Griechisch | Kapern/Mais | Oliven | Zwiebeln | Paprika | Feta | Oregano | Olivenöl</span>
+                </li>
+
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>5 – Rote Daz (scharf) – 12</span><br />
+                  <span className={styles.pizzaIngredients}>€ Griechisch | Mozzarella | scharfe Sauce | Knoblauch | Chiliöl</span>
+                </li>
+
+                <li className={styles.pizzaItem}>
+                  <span className={styles.pizzaName}>6 – Spezial – 14</span><br />
+                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Salami | Bacon | Paprika | Champignons</span>
+                </li>
+              </ul>
             </div>
           </div>
+          <div>
+            <Image
+              src="/dove.webp"
+              alt="Pizza aus dem Holzofen"
+              width={350}
+              height={350}
+              className={styles.pizzaImage}
+            />
+            <div className={styles.nutritionInfo}>
+              <h4>Öffnungszeiten</h4>
+              <p>Holzofenbäckerei Deitmerg</p>
+              <p>Lengelsen 6</p>
+              <p>58791 Werdohl</p>
+            </div>
+            <div className={styles.nutritionInfo}>
+              <h4>Jetzt vorbestellen</h4>
+              <a href="tel:+4904343555123" aria-label="Call us at +49 4343 555 123">
+                <p>+49 (0) 4343 555 123</p>
+              </a>
+              <p>WhatsApp, SMS und Anruf</p>
+            </div>
+            <SocialMediaBlock className={styles.nutritionInfo}/>
+
+          </div>
         </div>
+      </section>
+
+      {/* Brown Section - Process */}
+      <section className={styles.brownSection}>
+        <div className={styles.brownContent}>
+          <h2>Unser Holzofen</h2>
+          <p>
+            Das Herz der authentischen Pizza – seit über 20 Jahren in der Holzofenbäckerei Deitmerg.
+          </p>
+          <br/>
+          <p>
+            In der Holzofenbäckerei Deitmerg arbeiten wir mit einem traditionellen Holzofen, der seit über 20 Jahren im Einsatz ist.
+            Dieser Ofen verleiht jeder Pizza ihren unverwechselbaren Geschmack und die perfekte Kruste – etwas, das nur echtes Holzfeuer erreichen kann.
+          </p>
+          <p>
+            Die Temperatur im Ofen erreicht über 400 Grad Celsius, wodurch die Pizzen in nur wenigen Minuten perfekt gebacken werden.
+            Die intensive Hitze sorgt für einen knusprigen Boden und einen luftigen Rand, während die Zutaten ihr volles Aroma entfalten.
+          </p>
+          <p>
+            Jede Pizza wird von mir persönlich in den Ofen geschoben und genau beobachtet, bis sie die ideale Bräunung erreicht hat.
+            Diese handwerkliche Präzision und die Erfahrung von Hubert Deitmerg machen jede Pizza zu einem besonderen Erlebnis.
+          </p>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className={styles.gallery} id="gallery">
+        <PizzaGallery className="mx-auto my-8" />
+      </section>
+
+      {/* Logo Section */}
+      <section className={styles.logoSection}>
+        <div className={styles.logo}>
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="35" r="20" fill="#333"/>
+            <path d="M30 40 Q 35 50 50 55 Q 65 50 70 40" stroke="#333" strokeWidth="2" fill="none"/>
+            <ellipse cx="50" cy="70" rx="25" ry="15" fill="#333"/>
+            <path d="M40 60 Q 50 65 60 60" stroke="white" strokeWidth="1" fill="none"/>
+          </svg>
+        </div>
+        <h2>Angelos<br />Ziavros</h2>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 text-center">
-        <p>&copy; {new Date().getFullYear()} Angelo&#39;s Pizza – Alle Rechte vorbehalten.</p>
+      <footer className={styles.footer} id="contact">
+        <div className={styles.footerContent}>
+          <div className={styles.footerGrid}>
+            <div className={styles.footerSection}>
+              <h3>Angelos Ziavros</h3>
+              <p>
+                Tradition, Küche und Pizza<br />
+                Seit über 20 Jahren in Wendtorf<br />
+                Authentische Küche mit Herz
+              </p>
+            </div>
+
+            <div className={styles.footerSection}>
+              <h3>Kontakt</h3>
+              <p>
+                Hauptstraße 123<br />
+                24235 Wendtorf<br />
+                Deutschland<br />
+                <br />
+                Tel: +49 4343 555 123<br />
+                Email: info@angelos-pizza.de
+              </p>
+            </div>
+
+            <div className={styles.footerSection}>
+              <h3>Öffnungszeiten</h3>
+              <p>
+                Dienstag - Sonntag<br />
+                17:00 - 22:00 Uhr<br />
+                <br />
+                Montag Ruhetag<br />
+                <br />
+                Reservierungen empfohlen
+              </p>
+            </div>
+          </div>
+
+          <button className={styles.callButton}>
+            📞 Jetzt anrufen: +49 4343 555 123
+          </button>
+
+          <div className={styles.copyright}>
+            <p>© 2025 Angelos Ziavros. Alle Rechte vorbehalten. | Impressum | Datenschutz</p>
+          </div>
+        </div>
       </footer>
-    </>
+    </div>
   );
 }

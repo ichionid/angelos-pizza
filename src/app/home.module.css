@@ -1,0 +1,371 @@
+/* styles/Home.module.css */
+.container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  background: white;
+}
+
+/* Navigation */
+.nav {
+  background: white;
+  padding: 15px 40px;
+  border-bottom: 3px solid #0095da;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navTitle {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 300;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks a {
+  color: #0095da;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.navLinks a:hover {
+  border-bottom-color: #0095da;
+}
+
+/* Hero Section */
+.heroSection {
+  border: 3px solid #0095da;
+  margin: 20px;
+  padding: 60px 40px;
+  background: white;
+}
+
+
+.heroText h1 {
+  font-size: 2rem;
+  color: #8b6f47;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.heroText p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* About Section - Dark Green */
+.aboutContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 50px;
+  align-items: start;
+}
+
+.aboutContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.aboutContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.aboutText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.aboutText p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  margin-top: 30px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Pizza Section */
+.pizzaSection {
+  padding: 60px 40px;
+  background: #f9f9f9;
+}
+
+.pizzaContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 50px;
+}
+
+.pizzaText h2 {
+  font-size: 1.8rem;
+  color: #8b6f47;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.pizzaText p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.pizzaImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients {
+  margin: 30px 0;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ingredients h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.ingredients ul {
+  list-style: none;
+}
+
+.ingredients li {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #555;
+  border-bottom: 1px solid #eee;
+}
+
+.ingredients li:before {
+  content: "→ ";
+  color: #0095da;
+  margin-right: 8px;
+}
+
+.nutritionInfo {
+  margin-top: 20px;
+  background: #fff9e6;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.nutritionInfo h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.nutritionInfo p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Brown Section */
+.brownSection {
+  background: linear-gradient(to bottom, #8b6f47, #a0866b);
+  padding: 60px 40px;
+  color: white;
+}
+
+.brownContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brownContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.brownContent p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 40px;
+  background: white;
+}
+
+.galleryGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.galleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.galleryItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05);
+}
+
+/* Logo Section */
+.logoSection {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.logoSection h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to bottom, #2d4a2d, #1a2e1a);
+  color: white;
+  padding: 50px 40px 30px;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footerSection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.footerSection p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.callButton {
+  background: #0095da;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  margin: 30px auto;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hero,
+  .aboutContent,
+  .pizzaContent {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .aboutSection,
+  .pizzaSection,
+  .brownSection,
+  .gallery,
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .heroText h1 {
+    font-size: 1.5rem;
+  }
+
+  .aboutContent h2,
+  .pizzaText h2,
+  .brownContent h2 {
+    font-size: 1.4rem;
+  }
+}

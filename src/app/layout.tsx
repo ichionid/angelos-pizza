@@ -65,45 +65,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <nav className="bg-white shadow-md sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="text-2xl font-bold text-red-600">
-                Angelon&#39;s Pizza
-              </Link>
-              {/* Mobile menu button */}
-              <div className="md:hidden">
-                <button className="text-gray-700 hover:text-red-600">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-            </div>
+      <body className="bg-white text-gray-900">
+        <header className="bg-white shadow-md">
+          <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 className="text-xl font-bold">Angelos Ziavros</h1>
+            <nav className="space-x-4 hidden md:flex">
+              <Link href="/">Über Angelos</Link>
+              <Link href="#menu">Pizza in Werdohl</Link>
+              <Link href="/impressum">Impressum</Link>
+            </nav>
           </div>
-        </nav>
+        </header>
 
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main>{children}</main>
 
-        <footer className="bg-red-700 text-white py-8">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="text-center">
-              <p className="text-lg font-semibold">Angelon&#39;s Pizza Berlin</p>
-              <p className="mt-2">© {new Date().getFullYear()} Angelon&#39;s Pizza - Alle Rechte vorbehalten</p>
-              <div className="mt-4 space-x-6">
-                <Link href="/impressum" className="hover:underline">
-                  Impressum
-                </Link>
-                <Link href="/datenschutz" className="hover:underline">
-                  Datenschutz
-                </Link>
-              </div>
-            </div>
+        <footer className="bg-green-900 text-white p-4 mt-10">
+          <div className="max-w-6xl mx-auto text-center">
+            © 2025 Angelos Ziavros
           </div>
         </footer>
       </body>
