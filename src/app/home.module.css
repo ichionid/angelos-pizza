@@ -44,7 +44,6 @@
 
 /* Hero Section */
 .heroSection {
-  border: 3px solid #0095da;
   margin: 20px;
   padding: 60px 40px;
   background: white;
@@ -65,13 +64,13 @@
   color: #555;
 }
 
-.heroImage {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+/* About Section - Dark Green */
+.aboutSection {
+  background: linear-gradient(to bottom, #2d4a2d, #3d5a3d);
+  padding: 60px 40px;
+  color: white;
 }
 
-/* About Section - Dark Green */
 .aboutContent {
   max-width: 1200px;
   margin: 0 auto;
@@ -80,16 +79,6 @@
   gap: 50px;
   align-items: start;
 }
-
-.aboutContent {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 50px;
-  align-items: start;
-}
-
 .aboutContent h2 {
   font-size: 1.8rem;
   margin-bottom: 20px;

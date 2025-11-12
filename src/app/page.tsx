@@ -26,7 +26,7 @@ export default function Home() {
               alt="Angelos Ziavros"
               width={300}
               height={400}
-              className={styles.heroImage}
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
             />
           </div>
         </div>
