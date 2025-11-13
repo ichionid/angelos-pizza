@@ -6,7 +6,7 @@ interface PizzaGalleryProps {
 
 export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl ${className}`}>
+    <div className={`grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto my-8 ${className}`}>
       {/* Left Column */}
       <div className="space-y-4">
         {/* Large pizza image */}
@@ -22,13 +22,14 @@ export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
         </div>
 
         {/* Bread/Dough image */}
-        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-5/4 relative">
+        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-square relative">
           <Image
-            src="/dove.svg"
+            src="/dove.jpg"
             alt="Fresh dough"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
+            loading="eager"
           />
         </div>
       </div>
@@ -38,18 +39,19 @@ export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
         {/* Pizza in oven */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[4/3] relative">
           <Image
-            src="/oven.svg"
+            src="/oven.jpg"
             alt="Pizza in oven"
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, 50vw"
+            loading="eager"
           />
         </div>
 
         {/* Wood-fired oven with pizzas */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-square relative">
           <Image
-            src="/wood-oven.svg"
+            src="/wood-oven.jpg"
             alt="Wood-fired oven"
             fill
             className="object-cover"
@@ -60,7 +62,7 @@ export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
         {/* Firewood/outdoor scene */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[4/3] relative">
            <Image
-            src="/firewood.svg"
+            src="/firewood.jpg"
             alt="Fire wood"
             fill
             className="object-cover"
