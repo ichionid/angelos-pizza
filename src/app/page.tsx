@@ -37,7 +37,7 @@ export default function Home() {
         <div className={styles.aboutContent}>
           <div>
             <Image
-              src="/chefs.svg"
+              src="/chefs.jpg"
               alt="Angelos mit Team"
               width={300}
               height={400}
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           <div>
             <Image
-              src="/dove.webp"
+              src="/dove.jpg"
               alt="Pizza aus dem Holzofen"
               width={350}
               height={350}
