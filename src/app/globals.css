@@ -1,4 +1,11 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles if needed */
+body {
+  font-family: 'Inter', sans-serif;
+}
 
 :root {
   --background: #ffffff;
@@ -23,4 +30,69 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+/* styles/Home.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about, .pizza, .gallery {
+  margin-bottom: 50px;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.pizzaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pizzaItem {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.pizzaName {
+  font-weight: 600;
+  color: #000;
+}
+
+.pizzaIngredients {
+  color: #666;
+  font-size: 14px;
 }

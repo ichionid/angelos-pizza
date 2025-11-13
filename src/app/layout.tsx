@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,33 +12,30 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
 export const metadata: Metadata = {
-  title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+  title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
   description:
-    "Authentic Italian pizza in Berlin. Wood-fired, handmade, and always fresh. Order online or visit Angelo's Pizza today!",
+    "Angelo's Pizza in Werdohl – seit 1985. Authentische italienische Pizza, frisch gebacken im Holzofen. Besuchen Sie uns für den besten Geschmack Italiens.",
   keywords: [
-    "pizza",
-    "italian restaurant",
-    "pizzeria berlin",
-    "wood-fired pizza",
-    "order pizza online",
+    "Pizza Werdohl",
+    "beste Pizza Werdohl",
+    "italienisches Restaurant Werdohl",
+    "Holzofenpizza Werdohl",
+    "Angelo's Pizza",
+    "Pizzeria Werdohl",
   ],
-  authors: [{ name: "Angelo's Pizza" }],
-  creator: "Angelo's Pizza",
-  metadataBase: new URL("https://angelos-pizza.de"), // update when domain ready
   openGraph: {
-    title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+    title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
-      "Authentic Italian pizza in Berlin. Wood-fired, handmade, and always fresh.",
-    url: "https://angelos-pizza.de",
+      "Seit 1985 die beste Pizza in Werdohl. Handgemacht, frisch & im Holzofen gebacken.",
+    url: "https://angelos-ziavros.de",
     siteName: "Angelo's Pizza",
     images: [
       {
-        url: "/og-pizza.jpg", // put an image in /public
+        url: "https://angelos-ziavros.de/chef.webp", // absolute URL
         width: 1200,
         height: 630,
-        alt: "Fresh handmade pizza from Angelo's",
+        alt: "Angelo's Pizza Werdohl – Holzofenpizza",
       },
     ],
     locale: "de_DE",
@@ -45,10 +43,14 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Angelo's Pizza – Fresh Handmade Pizzas in Berlin",
+    title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
-      "Order authentic wood-fired pizza in Berlin. Fresh, hot & handmade since 1985.",
-    images: ["/og-pizza.jpg"],
+      "Holzofenpizza & italienische Spezialitäten in Werdohl. Seit 1985 ein Stück Italien in Ihrer Stadt.",
+    creator: "@angelospizza", // change if you have a Twitter/X handle
+    images: ["https://angelos-ziavros.de/chef.webp"], // or just ["/chef.webp"] if using metadataBase
+  },
+  alternates: {
+    canonical: "https://angelos-ziavros.de",
   },
   robots: {
     index: true,
@@ -56,27 +58,33 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-      <footer className="bg-red-700 text-white py-6 text-center">
-        <p>© {new Date().getFullYear()} Angelo&apos;s Pizza</p>
-        <div className="mt-2 space-x-4">
-          <a href="/impressum" className="hover:underline">Impressum</a>
-          <a href="/datenschutz" className="hover:underline">Datenschutz</a>
-        </div>
-      </footer>
+    <html lang="de">
+      <body className="bg-white text-gray-900">
+        <header className="bg-white shadow-md">
+          <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 className="text-xl font-bold">Angelos Ziavros</h1>
+            <nav className="space-x-4 hidden md:flex">
+              <Link href="/">Über Angelos</Link>
+              <Link href="#menu">Pizza in Werdohl</Link>
+              <Link href="/impressum">Impressum</Link>
+            </nav>
+          </div>
+        </header>
 
+        <main>{children}</main>
+
+        <footer className="bg-green-900 text-white p-4 mt-10">
+          <div className="max-w-6xl mx-auto text-center">
+            © 2025 Angelos Ziavros
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
