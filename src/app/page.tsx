@@ -2,25 +2,27 @@ import Image from 'next/image';
 import styles from "./home.module.css";
 import SocialMediaBlock from './components/SocialMediaBlock';
 import PizzaGallery from './components/PizzaGallery';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+  <div className="font-sans m-0 p-0 box-border text-gray-800 bg-white">
       {/* Hero Section */}
-      <section className={styles.heroSection} id="home">
-        <div className={styles.aboutContent}>
-          <div className={styles.heroText}>
-            <h1>Angelos Ziavros – Tradition, Küche und Pizza in Werdohl</h1>
-            <p>
-            Ich bin Angelos Ziavros, leidenschaftlicher Koch aus Werdohl. Mit über 20 Jahren Erfahrung in der Gastronomie bringe ich mediterrane Tradition und deutsche Kochkunst zusammen. Jeden Samstag verwöhne ich Werdohl mit frischer Holzofenpizza aus regionalen Zutaten in der Holzofenbäckerei Deitmerg.
+      {/* Hero Section */}
+      <section className="m-5 py-[60px] px-10 bg-white" id="home">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-[1fr_300px] grid-cols-1 gap-[50px] items-start">
+          <div className="order-2 lg:order-1">
+            <h1 className="text-[1.8rem] lg:text-[2rem] text-[#8b6f47] font-semibold mb-6 leading-[1.3]">
+              Angelos Ziavros – Tradition, Küche und Pizza in Werdohl
+            </h1>
+            <p className="text-base lg:text-lg text-gray-700 mb-4 leading-relaxed">
+              Ich bin Angelos Ziavros, leidenschaftlicher Koch aus Werdohl. Mit über 20 Jahren Erfahrung in der Gastronomie bringe ich mediterrane Tradition und deutsche Kochkunst zusammen. Jeden Samstag verwöhne ich Werdohl mit frischer Holzofenpizza aus regionalen Zutaten in der Holzofenbäckerei Deitmerg.
             </p>
-            <p>
-              Mein Anspruch: Nur die besten Zutaten, sorgfältige Zubereitung und eine Portion
-              Leidenschaft in jedem Gericht. Besuchen Sie mich und erleben Sie authentische
-              Küche in familiärer Atmosphäre.
+            <p className="text-base lg:text-lg text-gray-700 leading-relaxed">
+              Mein Anspruch: Nur die besten Zutaten, sorgfältige Zubereitung und eine Portion Leidenschaft in jedem Gericht. Besuchen Sie mich und erleben Sie authentische Küche in familiärer Atmosphäre.
             </p>
           </div>
-          <div>
+          <div className="order-1 lg:order-2">
             <Image
               src="/chef.webp"
               alt="Angelos Ziavros"
@@ -31,7 +33,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* About Section */}
    <section className={styles.aboutSection} id="about">
         <div className={styles.aboutContent}>
@@ -64,7 +65,7 @@ export default function Home() {
               Meine Wurzeln liegen in der mediterranen Küche.
               Mein Ziel ist es, beide Traditionen miteinander zu verbinden, um etwas Einzigartiges zu schaffen – und dabei folge ich ausschließlich meinem Herzen.
             </p>
-            <div className={styles.signature}>Angelos</div>
+            <div className="mt-20 lg:mt-70"><Image className="lg:ml-auto lg:mr-auto"src="/signature.svg" alt="Angelos Ziavros signature" width={100} height={30} /></div>
           </div>
         </div>
       </section>
@@ -178,14 +179,14 @@ export default function Home() {
       {/* Logo Section */}
       <section className={styles.logoSection}>
         <div className={styles.logo}>
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="35" r="20" fill="#333"/>
-            <path d="M30 40 Q 35 50 50 55 Q 65 50 70 40" stroke="#333" strokeWidth="2" fill="none"/>
-            <ellipse cx="50" cy="70" rx="25" ry="15" fill="#333"/>
-            <path d="M40 60 Q 50 65 60 60" stroke="white" strokeWidth="1" fill="none"/>
-          </svg>
+           <Image
+              src="/angelos-ziavros-logo-vertical.svg"
+              alt="Angelos Ziavros"
+              width={300}
+              height={400}
+              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+            />
         </div>
-        <h2>Angelos<br />Ziavros</h2>
       </section>
 
       {/* Footer */}
@@ -226,12 +227,8 @@ export default function Home() {
             </div>
           </div>
 
-          <button className={styles.callButton}>
-            📞 Jetzt anrufen: +49 4343 555 123
-          </button>
-
           <div className={styles.copyright}>
-            <p>© 2025 Angelos Ziavros. Alle Rechte vorbehalten. | Impressum | Datenschutz</p>
+            <p>© 2025 Angelos Ziavros. Alle Rechte vorbehalten. | <Link href="/impressum">Impressum</Link></p>
           </div>
         </div>
       </footer>

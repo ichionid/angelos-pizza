@@ -1,53 +1,8 @@
-/* styles/Home.module.css */
-.container {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: #333;
-  background: white;
-}
+
 
 /* Navigation */
-.nav {
-  background: white;
-  padding: 15px 40px;
-  border-bottom: 3px solid #0095da;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.navTitle {
-  font-size: 1.2rem;
-  color: #999;
-  font-weight: 300;
-}
 
-.navLinks {
-  display: flex;
-  gap: 30px;
-}
-
-.navLinks a {
-  color: #0095da;
-  text-decoration: none;
-  font-size: 0.9rem;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s;
-}
-
-.navLinks a:hover {
-  border-bottom-color: #0095da;
-}
-
-/* Hero Section */
-.heroSection {
-  margin: 20px;
-  padding: 60px 40px;
-  background: white;
-}
 
 
 .heroText h1 {
@@ -75,7 +30,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 500px;
   gap: 50px;
   align-items: start;
 }
@@ -92,13 +47,6 @@
 
 .aboutText p {
   margin-bottom: 15px;
-}
-
-.signature {
-  margin-top: 30px;
-  font-family: 'Brush Script MT', cursive;
-  font-size: 2.5rem;
-  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Pizza Section */

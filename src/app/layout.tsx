@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
       "Seit 1985 die beste Pizza in Werdohl. Handgemacht, frisch & im Holzofen gebacken.",
-    url: "https://angelos-ziavros.de",
+    url: "https://angelosziavros.de",
     siteName: "Angelo's Pizza",
     images: [
       {
-        url: "https://angelos-ziavros.de/chef.webp", // absolute URL
+        url: "https://angelosziavros.de/chef.webp", // absolute URL
         width: 1200,
         height: 630,
         alt: "Angelo's Pizza Werdohl – Holzofenpizza",
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     description:
       "Holzofenpizza & italienische Spezialitäten in Werdohl. Seit 1985 ein Stück Italien in Ihrer Stadt.",
     creator: "@angelospizza", // change if you have a Twitter/X handle
-    images: ["https://angelos-ziavros.de/chef.webp"], // or just ["/chef.webp"] if using metadataBase
+    images: ["https://angelosziavros.de/chef.webp"], // or just ["/chef.webp"] if using metadataBase
   },
   alternates: {
-    canonical: "https://angelos-ziavros.de",
+    canonical: "https://angelosziavros.de",
   },
   robots: {
     index: true,
@@ -78,12 +78,6 @@ export default function RootLayout({
         </header>
 
         <main>{children}</main>
-
-        <footer className="bg-green-900 text-white p-4 mt-10">
-          <div className="max-w-6xl mx-auto text-center">
-            © 2025 Angelos Ziavros
-          </div>
-        </footer>
       </body>
     </html>
   );
