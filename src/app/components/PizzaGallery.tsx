@@ -11,25 +11,40 @@ export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
       <div className="space-y-4">
         {/* Large pizza image */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-square relative">
-          <Image
-            src="/pizza.jpg"
-            alt="Fresh pizza"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            priority
-          />
+            <Image
+              src="/mobile/pizza.webp"
+              alt="frische Pizza"
+              width={300}
+              height={400}
+              className="lg:hidden w-full h-auto rounded-lg"
+            />
+            {/* Desktop image */}
+            <Image
+              src="/desktop/pizza.webp"
+              alt="frische Pizza"
+              width={300}
+              height={400}
+              className="hidden lg:block w-full h-auto rounded-lg"
+            />
+
         </div>
 
         {/* Bread/Dough image */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-square relative">
           <Image
-            src="/dove.jpg"
-            alt="Fresh dough"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            loading="eager"
+            src="/mobile/dove.webp"
+            alt="Pizza Taube"
+            width={300}
+            height={400}
+            className="lg:hidden w-full h-auto rounded-lg"
+          />
+          {/* Desktop image */}
+          <Image
+            src="/desktop/dove.webp"
+            alt="Pizza Taube"
+            width={300}
+            height={400}
+            className="hidden lg:block w-full h-auto rounded-lg"
           />
         </div>
       </div>
@@ -39,34 +54,57 @@ export default function PizzaGallery({ className = '' }: PizzaGalleryProps) {
         {/* Pizza in oven */}
         <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[4/3] relative">
           <Image
-            src="/oven.jpg"
-            alt="Pizza in oven"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            loading="eager"
+            src="/mobile/oven.webp"
+            alt="Pizza im Ofen"
+            width={300}
+            height={400}
+            className="lg:hidden w-full h-auto rounded-lg"
+          />
+          {/* Desktop image */}
+          <Image
+            src="/desktop/oven.webp"
+            alt="Pizza im Ofen"
+            width={300}
+            height={400}
+            className="hidden lg:block w-full h-auto rounded-lg"
           />
         </div>
 
         {/* Wood-fired oven with pizzas */}
-        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-square relative">
+        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[3/2]  relative">
           <Image
-            src="/wood-oven.jpg"
-            alt="Wood-fired oven"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            src="/mobile/woodoven.webp"
+            alt="Holzofen"
+            width={300}
+            height={400}
+            className="lg:hidden w-full h-auto rounded-lg"
+          />
+          {/* Desktop image */}
+          <Image
+            src="/desktop/woodoven.webp"
+            alt="Holzofen"
+            width={300}
+            height={400}
+            className="hidden lg:block w-full h-auto rounded-lg"
           />
         </div>
 
         {/* Firewood/outdoor scene */}
-        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[4/3] relative">
+        <div className="bg-gray-200 rounded-lg overflow-hidden aspect-[3/4] relative">
            <Image
-            src="/firewood.jpg"
-            alt="Fire wood"
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            src="/mobile/firewood.webp"
+            alt="Brennholz"
+            width={300}
+            height={400}
+            className="lg:hidden w-full h-auto rounded-lg"
+          />
+          {/* Desktop image */}
+          <Image
+            src="/desktop/firewood.webp"
+            alt="Brennholz"
+            width={300}
+            height={400}
+            className="hidden lg:block w-full h-auto rounded-lg"
           />
         </div>
       </div>

@@ -23,12 +23,21 @@ export default function Home() {
             </p>
           </div>
           <div className="order-1 lg:order-2">
+           {/* Mobile image */}
             <Image
-              src="/chef.webp"
+              src="/mobile/chef.webp"
               alt="Angelos Ziavros"
               width={300}
               height={400}
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+              className="lg:hidden w-full h-auto rounded-lg"
+            />
+            {/* Desktop image */}
+            <Image
+              src="/desktop/chef.webp"
+              alt="Angelos Ziavros"
+              width={300}
+              height={400}
+              className="hidden lg:block w-full h-auto rounded-lg"
             />
           </div>
         </div>
@@ -38,12 +47,21 @@ export default function Home() {
         <div className={styles.aboutContent}>
           <div>
             <Image
-              src="/chefs.jpg"
-              alt="Angelos mit Team"
+              src="/mobile/chefs.webp"
+              alt="Angelos Ziavros"
               width={300}
               height={400}
-              style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+              className="lg:hidden w-full h-auto rounded-lg"
             />
+            {/* Desktop image */}
+            <Image
+              src="/desktop/chefs.webp"
+              alt="Angelos Ziavros"
+              width={300}
+              height={400}
+              className="hidden lg:block w-full h-auto rounded-lg"
+            />
+
           </div>
           <div id="angelos" className={styles.aboutText}>
             <h2>Über Angelos Ziavros</h2>
