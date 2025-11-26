@@ -57,27 +57,40 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
+const MAINTENANCE_MODE = true; // set to false when done
+
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="de">
       <body className="bg-white text-gray-900">
-        <header className="bg-white shadow-md">
-          <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-            <h1 className="text-xl font-bold">Angelos Ziavros</h1>
-            <nav className="space-x-4 hidden md:flex">
-              <Link href="/">Über Angelos</Link>
-              <Link href="#menu">Pizza in Werdohl</Link>
-              <Link href="/impressum">Impressum</Link>
-            </nav>
-          </div>
-        </header>
+        {MAINTENANCE_MODE ? (
+          <main className="flex flex-col items-center justify-center min-h-screen p-12 text-center">
+            <h1 className="text-3xl font-bold mb-4">🚧 Seite im Aufbau</h1>
+            <p className="text-lg">
+              Wir sind bald wieder für Sie da. Vielen Dank für Ihre Geduld!
+            </p>
+          </main>
+        ) : (
+          <>
+            <header className="bg-white shadow-md">
+              <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
+                <h1 className="text-xl font-bold">Angelos Ziavros</h1>
+                <nav className="space-x-4 hidden md:flex">
+                  <Link href="/">Über Angelos</Link>
+                  <Link href="#menu">Pizza in Werdohl</Link>
+                  <Link href="/impressum">Impressum</Link>
+                </nav>
+              </div>
+            </header>
 
-        <main>{children}</main>
+            <main>{children}</main>
+          </>
+        )}
       </body>
     </html>
   );
