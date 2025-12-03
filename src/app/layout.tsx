@@ -79,9 +79,6 @@ export default function RootLayout({
           <>
             <header className="bg-white shadow-md">
               <div className="max-w-6xl mx-auto flex justify-between items-center p-4">
-<<<<<<< HEAD
-                <h1 className="text-xl font-bold">Angelos Ziavros</h1>
-=======
                 <Link href="/">
                   <h1 className="sr-only">Angelos Ziavros</h1>
                   <Image
@@ -92,7 +89,6 @@ export default function RootLayout({
                   className="hidden lg:block h-8 w-auto rounded-lg"
                   />
                 </Link>
->>>>>>> dev
                 <nav className="space-x-4 hidden md:flex">
                   <Link href="/">Über Angelos</Link>
                   <Link href="#menu">Pizza in Werdohl</Link>
