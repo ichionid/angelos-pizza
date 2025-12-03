@@ -2,7 +2,10 @@ import Image from 'next/image';
 import styles from "./home.module.css";
 import SocialMediaBlock from './components/SocialMediaBlock';
 import PizzaGallery from './components/PizzaGallery';
+import Address from './components/Address';
+import MenuImages from './components/MenuImages';
 import Link from "next/link";
+import { Menu } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -83,7 +86,15 @@ export default function Home() {
               Meine Wurzeln liegen in der mediterranen Küche.
               Mein Ziel ist es, beide Traditionen miteinander zu verbinden, um etwas Einzigartiges zu schaffen – und dabei folge ich ausschließlich meinem Herzen.
             </p>
-            <div className="mt-20 lg:mt-70"><Image className="lg:ml-auto lg:mr-auto"src="/signature.svg" alt="Angelos Ziavros signature" width={100} height={30} /></div>
+            <div className="flex justify-end mt-5 lg:mt-70">
+              <Image
+                className="w-10 lg:w-10"   // mobile smaller, desktop bigger
+                src="/signature.svg"
+                alt="Angelos Ziavros signature"
+                width={100}
+                height={30}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -103,40 +114,8 @@ export default function Home() {
               Im Steinofen bei über 400°C entstehen dann knusprige Meisterwerke, die jeden
               Bissen zu einem Genuss machen.
             </p>
-
             <div className={styles.ingredients}>
-              <h3>Unsere Pizza-Auswahl</h3>
-              <ul className={styles.pizzaList}>
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>1 – Margherita – 9</span><br />
-                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Basilikum | Olivenöl</span>
-                </li>
-
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>2 – Salami – 12</span><br />
-                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Salami</span>
-                </li>
-
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>3 – Bacon – 12</span><br />
-                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Bacon | karamellisierte Zwiebeln</span>
-                </li>
-
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>4 – Griechische Delikatesse – 13</span><br />
-                  <span className={styles.pizzaIngredients}>€ Griechisch | Kapern/Mais | Oliven | Zwiebeln | Paprika | Feta | Oregano | Olivenöl</span>
-                </li>
-
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>5 – Rote Daz (scharf) – 12</span><br />
-                  <span className={styles.pizzaIngredients}>€ Griechisch | Mozzarella | scharfe Sauce | Knoblauch | Chiliöl</span>
-                </li>
-
-                <li className={styles.pizzaItem}>
-                  <span className={styles.pizzaName}>6 – Spezial – 14</span><br />
-                  <span className={styles.pizzaIngredients}>€ Italienisch | Mozzarella | Salami | Bacon | Paprika | Champignons</span>
-                </li>
-              </ul>
+              <MenuImages/>
             </div>
           </div>
           <div>
@@ -149,9 +128,7 @@ export default function Home() {
             />
             <div className={styles.nutritionInfo}>
               <h4>Öffnungszeiten</h4>
-              <p>Holzofenbäckerei Deitmerg</p>
-              <p>Lengelsen 6</p>
-              <p>58791 Werdohl</p>
+                <Address/>
             </div>
             <div className={styles.nutritionInfo}>
               <h4>Jetzt vorbestellen</h4>
@@ -184,7 +161,7 @@ export default function Home() {
           </p>
           <p>
             Jede Pizza wird von mir persönlich in den Ofen geschoben und genau beobachtet, bis sie die ideale Bräunung erreicht hat.
-            Diese handwerkliche Präzision und die Erfahrung von Hubert Deitmerg machen jede Pizza zu einem besonderen Erlebnis.
+            Diese handwerkliche Präzision macht jede Pizza zu einem besonderen Erlebnis.
           </p>
         </div>
       </section>
@@ -222,13 +199,12 @@ export default function Home() {
 
             <div className={styles.footerSection}>
               <h3>Kontakt</h3>
-              <p>
-                Hauptstraße 123<br />
-                24235 Wendtorf<br />
-                Deutschland<br />
+               <p>
+                <strong>Tel:</strong>{" "}
+                <a href="tel:+494343555123">+49 4343 555 123</a>
                 <br />
-                Tel: +49 4343 555 123<br />
-                Email: info@angelos-pizza.de
+                <strong>Email:</strong>{" "}
+                <a href="mailto:angelospizzawerdohl@gmail.com">angelospizzawerdohl@gmail.com</a>
               </p>
             </div>
 
@@ -237,9 +213,7 @@ export default function Home() {
               <p>
                 Dienstag - Sonntag<br />
                 17:00 - 22:00 Uhr<br />
-                <br />
                 Montag Ruhetag<br />
-                <br />
                 Reservierungen empfohlen
               </p>
             </div>
