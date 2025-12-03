@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 export const metadata: Metadata = {
   title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
   description:
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "Angelo's Pizza",
     images: [
       {
-        url: "https://angelosziavros.de/chef.webp", // absolute URL
+        url: "https://angelosziavros.de/og-image.webp", // Create a properly sized OG image
         width: 1200,
         height: 630,
         alt: "Angelo's Pizza Werdohl – Holzofenpizza",
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
     title: "Angelo's Pizza Werdohl – Authentische Italienische Pizza",
     description:
       "Holzofenpizza & italienische Spezialitäten in Werdohl. Seit 1985 ein Stück Italien in Ihrer Stadt.",
-    creator: "@angelospizza", // change if you have a Twitter/X handle
-    images: ["https://angelosziavros.de/chef.webp"], // or just ["/chef.webp"] if using metadataBase
+    creator: "@angelospizza",
+    images: ["https://angelosziavros.de/og-image.webp"],
   },
   alternates: {
     canonical: "https://angelosziavros.de",
@@ -58,7 +59,8 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-const MAINTENANCE_MODE = false; // set to false when done
+
+const MAINTENANCE_MODE = false;
 
 export default function RootLayout({
   children,
@@ -86,7 +88,7 @@ export default function RootLayout({
                     alt="Angelso Ziavros Logo"
                     width={100}
                     height={200}
-                  className="hidden lg:block h-8 w-auto rounded-lg"
+                    className="hidden lg:block h-8 w-auto rounded-lg"
                   />
                 </Link>
                 <nav className="space-x-4 hidden md:flex">
